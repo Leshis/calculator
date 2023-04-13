@@ -10,8 +10,11 @@ body{
 }
 
 .interface{
-    width: 400px;
-    border: 1px solid black;
+    width: 450px;
+    padding: 2em;
+    border-radius: 5%;
+    border: 2px solid black;
+    background-color: #c5c5c5;
 }
 
 .screen{
@@ -22,8 +25,10 @@ body{
     height: 110px;
     align-items: flex-end;
     padding: 1em;
-    margin-bottom: 0.25em;
-    background-color: #c5c5c5;
+    margin-bottom: 0.8em;
+    border: 2px solid black;
+    border-radius: 3%;
+    background-color: #e7e7e7;
 }
 
 .screen-upper,
@@ -38,14 +43,17 @@ body{
 
 .inputs{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 0.25em;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 0.35em;
 }
 
 button{
     padding: 1em;
     border: none;
     font-size: 1.5rem;
+    border: 2px solid black;
+    background-color: #e7e7e7;
+    border-radius: 3%;
     cursor: pointer;
 }
 
@@ -53,7 +61,8 @@ button:hover{
     background-color: grey;
 }
 
-button:last-child{
+button:first-child{
+    background-color: rgb(236, 109, 109);
     width: 100%;
     grid-column: 1 / -1;
 }

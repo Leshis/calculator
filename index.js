@@ -36,11 +36,14 @@ function operate(operation, num1, num2) {
 }
 
 function reset() {
+    answer = 0;
     num1 = 0;
     num2 = 0;
+    operation = '';
+    operationChar = '';
     numString = '';
     screenUpper.textContent = '';
-    screenLower.textContent = '';
+    screenLower.textContent = '0';
 }
 
 numberButtons.forEach(button => {
@@ -64,30 +67,30 @@ document.body.addEventListener('click', function (e) {
         case 'subtract':
         case 'multiply':
         case 'divide':
-          if (!answer) {
-            num1 = parseFloat(numString);
-            numString = '';
-          } else if (answer) {
-            num1 = answer;
-            numString = '';
-          }
-          shouldReset = true;
-          operation = e.target.id;
-          operationChar = e.target.textContent;
-          screenUpper.textContent = `${num1} ${operationChar}`;
-          break;
+            if (!answer) {
+                num1 = parseFloat(numString);
+                numString = '';
+            } else if (answer) {
+                num1 = answer;
+                numString = '';
+            }
+            shouldReset = true;
+            operation = e.target.id;
+            operationChar = e.target.textContent;
+            screenUpper.textContent = `${num1} ${operationChar}`;
+            break;
         case 'delete':
-          reset();
-          break;
+            reset();
+            break;
         case 'equals':
-          if (numString) {
-            num2 = parseFloat(numString);
-            numString = '';
-            screenUpper.textContent = `${num1} ${operationChar} ${num2} =`
-            operate(operation, num1, num2);
-          }
-          break;
+            if (numString) {
+                num2 = parseFloat(numString);
+                numString = '';
+                screenUpper.textContent = `${num1} ${operationChar} ${num2} =`
+                operate(operation, num1, num2);
+            }
+            break;
         default:
-          break;
-      }
+            break;
+    }
 });
