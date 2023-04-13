@@ -3,9 +3,10 @@
 }
 
 body{ 
-    margin: 0;
+    margin: 5em 0;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .interface{
@@ -14,12 +15,25 @@ body{
 }
 
 .screen{
-    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0.5em;
+    height: 110px;
+    align-items: flex-end;
     padding: 1em;
     margin-bottom: 0.25em;
     background-color: #c5c5c5;
+}
+
+.screen-upper,
+.screen-lower{
+    font-size: 2.2rem;
     text-align: right;
-    font-size: 2rem;
+}
+
+.screen-upper{
+    font-size: 1.5rem;
 }
 
 .inputs{
