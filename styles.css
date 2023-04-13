@@ -18,6 +18,8 @@ body{
     padding: 1em;
     margin-bottom: 0.25em;
     background-color: #c5c5c5;
+    text-align: right;
+    font-size: 2rem;
 }
 
 .inputs{
