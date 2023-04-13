@@ -1,0 +1,43 @@
+*{
+    box-sizing: border-box;
+}
+
+body{ 
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.interface{
+    width: 400px;
+    border: 1px solid black;
+}
+
+.screen{
+    height: 100px;
+    padding: 1em;
+    margin-bottom: 0.25em;
+    background-color: #c5c5c5;
+}
+
+.inputs{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0.25em;
+}
+
+button{
+    padding: 1em;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: grey;
+}
+
+button:last-child{
+    width: 100%;
+    grid-column: 1 / -1;
+}
