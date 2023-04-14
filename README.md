@@ -26,4 +26,4 @@ Click [here](https://leshis.github.io/calculator/) to try.
 ## **Contributing**
 If you find a bug or would like to suggest an improvement, feel free to open an issue or submit a pull request.
 ## **Credits**
- -The project is based on a challenge from The Odin Project.
+  - The project is based on a challenge from The Odin Project.
