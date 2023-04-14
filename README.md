@@ -1,7 +1,7 @@
 # Calculator
 This is a simple web-based calculator built with HTML, CSS, and JavaScript. It allows users to perform basic arithmetic operations, including addition, subtraction, multiplication, and division.
 
-Click [here](https://leshis.github.io/etch-a-sketch/) to try.
+Click [here](https://leshis.github.io/calculator/) to try.
 
 ![Calculator](https://user-images.githubusercontent.com/94430516/232045676-078caefe-7cd4-4f5d-b6f9-9c1ec662fd14.png)
 
@@ -9,7 +9,6 @@ Click [here](https://leshis.github.io/etch-a-sketch/) to try.
 ## **Features**
  - Users can enter numbers using either the on-screen buttons or their keyboard.
  - The calculator supports basic arithmetic operations: addition (+), subtraction (-), multiplication (*), and division (/).
- - Users can chain together multiple operations by entering a sequence of numbers and operators.
  - The calculator handles division by zero gracefully, displaying an error message to the user.
  - Users can use a backspace button to delete the last entered character.
  - The calculator has a responsive design that adapts to different screen sizes.
