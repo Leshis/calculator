@@ -117,3 +117,33 @@ document.body.addEventListener('click', function (e) {
             break;
     }
 });
+
+document.addEventListener('keydown', function(e){
+    const key = e.key;
+    if(!isNaN(key) && key != 0){
+        numberButtons[key-1].click();
+    }
+    else if(key == 0){
+        numberButtons[10].click();
+    }
+    else if(key == '.'){
+        numberButtons[9].click();
+    }
+    else if(key == '+'){
+        operatorButtons[0].click();
+    }
+    else if(key == '-'){
+        operatorButtons[1].click();
+    }
+    else if(key == '*'){
+        operatorButtons[2].click();
+    }
+    else if(key == '/'){
+        operatorButtons[3].click();
+    }
+    else if(key == 'Delete'){
+        reset();
+    }else if(key == '=' || key =='Enter'){
+        document.querySelector('#equals').click();
+    }
+})

@@ -46,6 +46,11 @@ body{
 
 button#delete{
     grid-column: 1 / -1;
+    background-color: rgba(173, 40, 40, 0.75);
+}
+
+button#delete:hover{
+    background-color: rgba(173, 40, 40, 0.95);
 }
 
 button{
