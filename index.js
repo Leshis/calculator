@@ -53,6 +53,11 @@ function reset() {
     screenLower.textContent = '0';
 }
 
+function backspace(){
+    numString = numString.slice(0, -1);
+    updateDisplay();
+}
+
 function updateDisplay() {
     if (num1 != 0) {
         screenUpper.textContent = `${num1} ${operationChar}`;
@@ -102,8 +107,11 @@ document.body.addEventListener('click', function (e) {
             operationClicked = true;
             updateDisplay();
             break;
-        case 'delete':
+        case 'clear':
             reset();
+            break;
+        case 'delete':
+            backspace();
             break;
         case 'equals':
             if (numString) {
@@ -142,8 +150,12 @@ document.addEventListener('keydown', function(e){
         operatorButtons[3].click();
     }
     else if(key == 'Delete'){
-        reset();
-    }else if(key == '=' || key =='Enter'){
+        document.querySelector('#clear').click();
+    }
+    else if(key == 'Backspace'){
+        document.querySelector('#delete').click();
+    }
+    else if(key == '=' || key =='Enter'){
         document.querySelector('#equals').click();
     }
 })
