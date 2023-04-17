@@ -36,6 +36,9 @@ function divide(num1, num2) {
 
 function operate(operation, num1, num2) {
     answer = window[operation](num1, num2);
+    if (answer.toString().length > 15) {
+        answer = answer.toString().substring(0, 15);
+    }
     screenLower.textContent = answer;
     num1 = answer;
     num2 = 0;
